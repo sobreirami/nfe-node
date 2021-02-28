@@ -17,7 +17,8 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true,
-    "declaration": true
+    "declaration": true,
+    "declarationMap": true
   },
   "exclude": ["node_modules", "dist", "tmp", "src/**/*.spec.ts"]
 }

@@ -6,24 +6,16 @@
   "author": "Michel Rodrigues <sobreira.michel@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
-    "lint": "yarn eslint '*/**/*.ts' --fix"
+    "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "lint": "yarn eslint '*/**/*.ts' --fix",
+    "tsc": "tsc --noEmit"
   },
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
-    "@babel/cli": "^7.13.0",
-    "@babel/core": "^7.13.8",
-    "@babel/node": "^7.13.0",
-    "@babel/plugin-proposal-class-properties": "^7.13.0",
-    "@babel/plugin-proposal-decorators": "^7.13.5",
-    "@babel/preset-env": "^7.13.8",
-    "@babel/preset-typescript": "^7.13.0",
     "@typescript-eslint/eslint-plugin": "^4.15.2",
     "@typescript-eslint/parser": "^4.15.1",
-    "babel-plugin-module-resolver": "^4.1.0",
-    "babel-plugin-transform-typescript-metadata": "^0.3.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "6.11.0",
@@ -33,6 +25,8 @@
     "prettier": "2.0.5",
     "reflect-metadata": "^0.1.13",
     "ts-node-dev": "^1.1.6",
+    "tsconfig-paths": "^3.9.0",
+    "tscpaths": "^0.0.9",
     "typescript": "^4.1.5"
   },
   "dependencies": {
