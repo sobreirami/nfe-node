@@ -1,10 +1,19 @@
 {
   "name": "nfe-node",
   "version": "0.0.1",
+  "description": "Extrair chave publica e privada digital A1, pesquisar e reconhecer notas fiscais diretamente dos serviço da Receita Federal",
   "main": "dist/index.js",
   "repository": "git@github.com:sobreirami/nfe-node.git",
   "author": "Michel Rodrigues <sobreira.michel@gmail.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sobreirami/nfe-node/issues"
+  },
+  "keywords": [
+    "nfe",
+    "nota fiscal",
+    "darfe"
+  ],
   "scripts": {
     "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
     "lint": "yarn eslint '*/**/*.ts' --fix",
@@ -13,7 +22,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "homepage": "https://github.com/sobreirami/nfe-node",
   "devDependencies": {
+    "@appnest/readme": "^1.2.7",
     "@typescript-eslint/eslint-plugin": "^4.15.2",
     "@typescript-eslint/parser": "^4.15.1",
     "eslint": "^5.16.0",
