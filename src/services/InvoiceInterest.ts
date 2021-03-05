@@ -6,8 +6,8 @@ import IInvoiceInterestStateDTO from '../dtos/IInvoiceInterestDTO';
 
 import { ungzip } from 'node-gzip';
 
-import { XmlAdapter } from 'adapters/XmlAdapter';
-import TNFEDistDFeInteresse from 'schemas/TNFEDistDFeInteresse';
+import { XmlAdapter } from '../adapters/XmlAdapter';
+import TNFEDistDFeInteresse from '../schemas/TNFEDistDFeInteresse';
 
 export default async function InvoiceInterest(
     { production, cnpj, certificatePath, password }: IInvoiceInterestStateDTO
