@@ -7,27 +7,57 @@
 </p>
 
 <p align="center">
-  Extrair chave publica e privada digital A1, pesquisar e reconhecer notas fiscais diretamente dos serviço da Receita Federal
+  Pesquisar e reconhecer notas fiscais diretamente dos serviço da Receita Federal
 </p>
 
 ## Como utilizar
 
 Teste e aprenda <a href="https://npm.runkit.com/nfe-node" target="_blank">aqui</a>.
 
-### Extraindo certificado digital A1
+### Pesquisando notas não manifestadas
 
 ``` js
-import { extractCertificate } from 'nfe-node'
+import { InvoiceInterest } from 'nfe-node'
 
-await extractCertificate({
-  certificatePath,
-  password,
+await InvoiceInterest({
+  production: false,
+  state: 'sp',
+  cnpj: 'cnpj',
+  certificatePath: 'certificate.pfx',
+  password: 'password'
 });
 
-  // {
-  //   "certificate":  "certificate",
-  //   "keygen":  "private_key"
-  // }
+// {
+//   attributes: { versao: '1.01' },
+//   tpAmb: '2',
+//   verAplic: '1.2.0',
+//   cStat: '138',
+//   xMotivo: 'Documento(s) localizado(s)',
+//   dhResp: '2021-03-05T17:18:33-03:00',
+//   ultNSU: '000000000000030',
+//   maxNSU: '000000000000030',
+//   loteDistDFeInt: {
+//     docZip: [
+//       {
+//         attributes: { NSU: '000000000000024', schema: 'resNFe_v1.01.xsd' },
+//         '$value': 'Valor criptografado',
+//         resNFe: {
+//           chNFe: 'nfe',
+//           CNPJ: 'cnpj',
+//           xNome: 'nome',
+//           IE: 'ie',
+//           dhEmi: '2021-03-03T11:52:00-03:00',
+//           tpNF: '1',
+//           vNF: '1.99',
+//           digVal: 'dig',
+//           dhRecbto: '2021-03-03T12:15:40-03:00',
+//           nProt: 'protocolo',
+//           cSitNFe: '1'
+//         }
+//       },
+//     ]
+//   }
+// }
 ```
 
 ## Como instalar

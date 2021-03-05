@@ -12,10 +12,11 @@
   "keywords": [
     "nfe",
     "nota fiscal",
-    "darfe"
+    "sefaz",
+    "nfe-node"
   ],
   "scripts": {
-    "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "build": "tsc --project tsconfig.json",
     "lint": "yarn eslint '*/**/*.ts' --fix",
     "tsc": "tsc --noEmit"
   },
@@ -25,6 +26,8 @@
   "homepage": "https://github.com/sobreirami/nfe-node",
   "devDependencies": {
     "@appnest/readme": "^1.2.7",
+    "@types/sax": "^1.2.1",
+    "@types/xml2js": "^0.4.8",
     "@typescript-eslint/eslint-plugin": "^4.15.2",
     "@typescript-eslint/parser": "^4.15.1",
     "eslint": "^5.16.0",
@@ -41,7 +44,13 @@
     "typescript": "^4.1.5"
   },
   "dependencies": {
-    "pfx-to-pem": "^1.0.2",
-    "tsyringe": "^4.4.0"
+    "@types/node-gzip": "^1.1.0",
+    "@types/request": "^2.48.5",
+    "@types/soap": "^0.21.0",
+    "fs": "^0.0.1-security",
+    "node-gzip": "^1.1.2",
+    "soap": "^0.36.0",
+    "tsyringe": "^4.4.0",
+    "xml2js": "^0.4.23"
   }
 }

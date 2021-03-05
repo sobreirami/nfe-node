@@ -1,4 +1,1 @@
-import 'reflect-metadata';
-import '@shared/adapters';
-
-export { default as extractCertificate } from '@services/extractCertificate'
+export { default as InvoiceInterest } from './services/InvoiceInterest'

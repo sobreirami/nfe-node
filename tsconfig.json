@@ -1,24 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [ "es2015", "dom" ],
+    "target": "es2019",
     "module": "commonjs",
     "outDir": "./dist",
-    "rootDir": "./src",
     "strict": true,
-    "strictPropertyInitialization": false,
     "baseUrl": "./src",
-    "allowJs": true,
-    "paths": {
-      "@services/*": ["services/*"],
-      "@shared/*": ["shared/*"]
-    },
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "forceConsistentCasingInFileNames": true,
-    "declaration": true,
-    "declarationMap": true
+    "declaration": true
   },
-  "exclude": ["node_modules", "dist", "tmp", "src/**/*.spec.ts"]
+  "exclude": ["./node_modules", "./examples", "./dist"]
 }
